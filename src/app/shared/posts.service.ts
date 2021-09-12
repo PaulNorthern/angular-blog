@@ -14,7 +14,7 @@ export class PostsService {
     return this.http.post(`${environment.fbDbUrl}/posts.json`, post)
       // @ts-ignore
       .pipe(map((response: FbCreateResponse) => {
-        console.log(response)
+        console.log("response", response)
         return {
           ...post,
           id: response.name,
